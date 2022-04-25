@@ -1,0 +1,18 @@
+body {
+  background: #0f0f11 url("./../images/pattern-bg.png") no-repeat top right;
+  color: white;
+}
+
+.slick-next:before,
+[dir="rtl"] .slick-prev:before {
+  content: "" !important;
+}
+
+.slick-prev:before,
+[dir="rtl"] .slick-prev:before {
+  content: "" !important;
+}
+
+.col-auto {
+  grid-column: auto;
+}
