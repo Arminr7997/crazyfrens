@@ -1,13 +1,13 @@
 import React, { Fragment } from "react";
 import { Outlet } from "react-router-dom";
-import { HeaderLayout, FooterLayout } from "./partials";
+import { HeaderLayout } from "./partials";
 
 function Index() {
   return (
     <Fragment>
       <HeaderLayout />
       <Outlet />
-      <FooterLayout />
+      {/* <FooterLayout /> */}
     </Fragment>
   );
 }

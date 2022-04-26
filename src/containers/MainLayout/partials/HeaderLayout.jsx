@@ -154,31 +154,48 @@ function HeaderLayout() {
               <Disclosure.Panel className="md:hidden h-screen bg-dark">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   {navigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      className={classNames(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "block px-3 rounded-md text-base font-medium"
-                      )}
-                      aria-current={item.current ? "page" : undefined}
-                    >
-                      <div className="flex flex-row justify-between p-4 items-center border-b">
-                        <div className="flex flex-row items-center">
-                          <div>{item.icon}</div>
-                          <div className="ml-2 font-oswald text-white text-xl">
-                            {item.name}
+                    <Fragment>
+                      <Disclosure.Button
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "block px-3 rounded-md text-base font-medium"
+                        )}
+                        aria-current={item.current ? "page" : undefined}
+                      >
+                        <div className="flex flex-row justify-between p-4 items-center border-b">
+                          <div className="flex flex-row items-center">
+                            <div>{item.icon}</div>
+                            <div className="ml-2 font-oswald text-white text-xl">
+                              {item.name}
+                            </div>
+                          </div>
+                          <div>
+                            <img src={Images.navArrowRight} alt="icon" />
                           </div>
                         </div>
-                        <div>
-                          <img src={Images.navArrowRight} alt="icon" />
-                        </div>
-                      </div>
-                    </Disclosure.Button>
+                      </Disclosure.Button>
+                    </Fragment>
                   ))}
+                  <Disclosure.Button
+                    as="a"
+                    href="#"
+                    className={classNames(
+                      true
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "block px-3 rounded-md text-base font-medium"
+                    )}
+                    aria-current={true ? "page" : undefined}
+                  >
+                    <div className="mt-4 rounded-full text-xl font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-12 pt-2 pb-2 px-4">
+                      Connect Wallet
+                    </div>
+                  </Disclosure.Button>
                 </div>
                 <div className="pt-4 pb-3 border-t border-gray-700">
                   <div className="flex items-center px-5">
