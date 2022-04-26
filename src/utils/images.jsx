@@ -17,6 +17,14 @@ import num04Image from "./../assets/images/num04.png";
 import num05Image from "./../assets/images/num05.png";
 import num06Image from "./../assets/images/num06.png";
 import dividerImage from "./../assets/images/divider.png";
+import verticalDviderImage from "./../assets/images/vertical-divider.png";
+import mainArrowLeft from "./../assets/images/main-arrow-left.png";
+import mainArrowRight from "./../assets/images/main-arrow-right.png";
+import navArrowRight from "./../assets/images/nav-arrow-right.svg";
+import navHomeIcon from "./../assets/images/nav-icon-home.png";
+import navBagIcon from "./../assets/images/nav-icon-bag.png";
+import navDocumentIcon from "./../assets/images/nav-icon-document.png";
+import navMessagesIcon from "./../assets/images/nav-icon-messages.png";
 
 export const Images = {
   logoWhite,
@@ -38,4 +46,12 @@ export const Images = {
   num05Image,
   num06Image,
   dividerImage,
+  verticalDviderImage,
+  mainArrowLeft,
+  mainArrowRight,
+  navArrowRight,
+  navHomeIcon,
+  navBagIcon,
+  navDocumentIcon,
+  navMessagesIcon,
 };

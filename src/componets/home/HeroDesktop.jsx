@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import { Images } from "@/utils/images";
+import MainSlider from "./MainSlider";
 
 function HeroDesktop() {
   return (
@@ -21,11 +22,7 @@ function HeroDesktop() {
         </div>
 
         <div className="flex items-center justify-end w-full lg:h-96 lg:w-1/2 py-8">
-          <img
-            className="object-cover h-full lg:max-w-2xl rounded-md "
-            src={Images.heroSlide1}
-            alt="apple watch photo"
-          />
+          <MainSlider />
         </div>
       </div>
     </Fragment>

@@ -11,7 +11,7 @@ function ProjectMobile() {
         Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
         NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
       </p>
-      <div className="grid lg:gap-x-4 lg:gap-y-8 gap-y-10 mt-10 grid-flow-col ">
+      <div className="grid lg:gap-x-4 lg:gap-y-8 gap-y-10 mt-10 grid-flow-row ">
         <div className="bg-footer border-border border-l-8 rounded-md  p-4 relative">
           <div className="absolute right-0 top-0">
             <img src={Images.num01Image} alt="" />
@@ -47,7 +47,7 @@ function ProjectMobile() {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <img src={Images.dividerImage} alt="" />
+          <img src={Images.verticalDviderImage} alt="" />
         </div>
         <div className="bg-footer border-border border-l-8 rounded-md p-4 relative">
           <div className="absolute right-0 top-0">
@@ -83,9 +83,12 @@ function ProjectMobile() {
             </ul>
           </div>
         </div>
+        <div className="flex justify-center items-center">
+          <img src={Images.verticalDviderImage} alt="" />
+        </div>
       </div>
 
-      <div className="grid lg:gap-x-4 lg:gap-y-8 gap-y-10 mt-10 grid-flow-col ">
+      <div className="grid lg:gap-x-4 lg:gap-y-8 gap-y-10 mt-10 grid-flow-row ">
         <div className="bg-footer border-border border-l-8 rounded-md  p-4 relative">
           <div className="absolute right-0 top-0">
             <img src={Images.num03Image} alt="" />
@@ -121,7 +124,7 @@ function ProjectMobile() {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <img src={Images.dividerImage} alt="" />
+          <img src={Images.verticalDviderImage} alt="" />
         </div>
         <div className="bg-footer border-border border-l-8 rounded-md p-4 relative">
           <div className="absolute right-0 top-0">
@@ -157,9 +160,12 @@ function ProjectMobile() {
             </ul>
           </div>
         </div>
+        <div className="flex justify-center items-center">
+          <img src={Images.verticalDviderImage} alt="" />
+        </div>
       </div>
 
-      <div className="grid lg:gap-x-4 lg:gap-y-8 gap-y-10 mt-10 grid-flow-col ">
+      <div className="grid lg:gap-x-4 lg:gap-y-8 gap-y-10 mt-10 grid-flow-row ">
         <div className="bg-footer border-border border-l-8 rounded-md  p-4 relative">
           <div className="absolute right-0 top-0">
             <img src={Images.num05Image} alt="" />
@@ -195,7 +201,7 @@ function ProjectMobile() {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <img src={Images.dividerImage} alt="" />
+          <img src={Images.verticalDviderImage} alt="" />
         </div>
         <div className="bg-footer border-border border-l-8 rounded-md p-4 relative">
           <div className="absolute right-0 top-0">

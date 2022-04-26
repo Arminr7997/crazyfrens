@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { Images } from "@/utils/images";
 
 function FooterLayout() {
   return (
@@ -8,11 +7,7 @@ function FooterLayout() {
         <div className="md:flex justify-center items-center flex-col ">
           <div className="my-6 md:mb-4">
             <a href="https://nft.com" className="flex items-center">
-              <img
-                src={Images.logoWhite}
-                className="mr-3 h-8"
-                alt="FlowBite Logo"
-              />
+              <div className="font-jungle text-3xl">FFC</div>
             </a>
           </div>
           <div>
@@ -54,8 +49,8 @@ function FooterLayout() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-white sm:text-center font-oswald">
             © 2022{" "}
-            <a href="https://nftmarket.com" className="hover:underline">
-              The NFT Market
+            <a href="http://frenchiefriends.io/" className="hover:underline">
+              Frenchie Friends
             </a>
             . All Rights Reserved.
           </span>
