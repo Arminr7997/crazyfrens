@@ -25,6 +25,9 @@ import navHomeIcon from "./../assets/images/nav-icon-home.png";
 import navBagIcon from "./../assets/images/nav-icon-bag.png";
 import navDocumentIcon from "./../assets/images/nav-icon-document.png";
 import navMessagesIcon from "./../assets/images/nav-icon-messages.png";
+import circle01Image from "./../assets/images/circle01.png";
+import circle02Image from "./../assets/images/circle02.png";
+import circle03Image from "./../assets/images/circle03.png";
 
 export const Images = {
   logoWhite,
@@ -54,4 +57,7 @@ export const Images = {
   navBagIcon,
   navDocumentIcon,
   navMessagesIcon,
+  circle01Image,
+  circle02Image,
+  circle03Image,
 };

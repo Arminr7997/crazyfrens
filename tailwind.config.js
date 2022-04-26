@@ -12,6 +12,7 @@ module.exports = {
       secondary: {
         100: "#FF9900",
         200: "#888883",
+        300: "#70369B",
       },
       dark: "#0F0F11",
       footer: "#19191C",

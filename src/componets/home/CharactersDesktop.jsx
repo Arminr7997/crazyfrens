@@ -3,8 +3,8 @@ import { Images } from "@/utils/images";
 
 function CharactersDesktop() {
   return (
-    <div className="bg-footer">
-      <div className="container mx-auto lg:px-32 lg:py-8 px-8">
+    <div className="bg-dark">
+      <div className="container mx-auto py-12 lg:px-32 lg:py-8 px-8">
         <h1 className="font-jungle text-3xl">Characters</h1>
         <p className="font-oswald text-lg text-gray-400 mt-4">
           Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
