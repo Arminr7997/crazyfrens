@@ -13,16 +13,14 @@ function MemberListMobile() {
         </div>
         <div class="grid grid-cols-2 gap-2">
           <div className="px-2">
-            <div className="border-2 border-white rounded-4xl text-center py-8 w-full">
+            <div className="border-2 border-white p-4 rounded-4xl text-center py-8 w-full">
               <img
                 src={Images.avatar1}
                 alt="avatar"
                 className="m-2 mx-auto w-1/2"
               />
               <h3 className="font-oswald text-xl">Okhravi</h3>
-              <h5 className="font-oswald text-gray-400 text-lg ">
-                UI Designer
-              </h5>
+              <h5 className="font-oswald text-gray-400 text-lg">Designer</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
                   className="bg-dark px-1 rounded"
