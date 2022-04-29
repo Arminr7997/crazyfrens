@@ -85,7 +85,7 @@ function CarouselSlider() {
             </h5>
             <div className="w-full flex items-center justify-center ">
               <div
-                className="bg-dark px-12 rounded"
+                className="bg-dark px-12 rounded flex flex-row"
                 style={{ marginBottom: "-56px", marginTop: "20px" }}
               >
                 <a
@@ -124,7 +124,7 @@ function CarouselSlider() {
             </h5>
             <div className="w-full flex items-center justify-center ">
               <div
-                className="bg-dark px-12 rounded"
+                className="bg-dark px-12 rounded flex flex-row"
                 style={{ marginBottom: "-56px", marginTop: "20px" }}
               >
                 <a
@@ -163,7 +163,7 @@ function CarouselSlider() {
             </h5>
             <div className="w-full flex items-center justify-center ">
               <div
-                className="bg-dark px-12 rounded"
+                className="bg-dark px-12 rounded flex flex-row"
                 style={{ marginBottom: "-56px", marginTop: "20px" }}
               >
                 <a
@@ -202,7 +202,7 @@ function CarouselSlider() {
             </h5>
             <div className="w-full flex items-center justify-center ">
               <div
-                className="bg-dark px-12 rounded"
+                className="bg-dark px-12 rounded flex flex-row"
                 style={{ marginBottom: "-56px", marginTop: "20px" }}
               >
                 <a
@@ -241,7 +241,7 @@ function CarouselSlider() {
             </h5>
             <div className="w-full flex items-center justify-center ">
               <div
-                className="bg-dark px-12 rounded"
+                className="bg-dark px-12 rounded flex flex-row"
                 style={{ marginBottom: "-56px", marginTop: "20px" }}
               >
                 <a

@@ -23,7 +23,7 @@ function MemberListMobile() {
               <h5 className="font-oswald text-gray-400 text-lg">Designer</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
-                  className="bg-dark px-1 rounded"
+                  className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
@@ -64,7 +64,7 @@ function MemberListMobile() {
               <h5 className="font-oswald text-gray-400 text-lg">Developer</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
-                  className="bg-dark px-1 rounded"
+                  className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
@@ -105,7 +105,7 @@ function MemberListMobile() {
               <h5 className="font-oswald text-gray-400 text-lg">Designer</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
-                  className="bg-dark px-1 rounded"
+                  className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
@@ -146,7 +146,7 @@ function MemberListMobile() {
               <h5 className="font-oswald text-gray-400 text-lg">Manager</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
-                  className="bg-dark px-1 rounded"
+                  className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
