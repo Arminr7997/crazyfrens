@@ -6,7 +6,7 @@ function AboutProjectDesktop() {
     <div className="bg-footer">
       <div className="container mx-auto lg:px-32 lg:py-10 px-8">
         <h1 className="font-jungle text-3xl">About Project</h1>
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 my-12">
           <div className="flex flex-col justify-center items-center">
             <img src={Images.circle01Image} alt="image" className="my-6" />
             <div className="font-oswald text-xl">NFT</div>

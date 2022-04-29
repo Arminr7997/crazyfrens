@@ -11,7 +11,7 @@ function MemberListMobile() {
             <p className="font-oswald text-sm mb-4">See All</p>
           </a>
         </div>
-        <div class="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-2">
           <div className="px-2">
             <div className="border-2 border-white p-4 rounded-4xl text-center py-8 w-full">
               <img

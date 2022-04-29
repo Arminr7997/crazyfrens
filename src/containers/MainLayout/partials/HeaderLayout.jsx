@@ -45,8 +45,8 @@ function HeaderLayout() {
                             href={item.href}
                             className={classNames(
                               item.current
-                                ? "bg-dark text-white"
-                                : "text-gray-400 hover:bg-dark hover:text-white",
+                                ? "btext-white"
+                                : "text-gray-400 hover:text-white",
                               "px-3 py-2 rounded-md text-md font-medium font-oswald"
                             )}
                             aria-current={item.current ? "page" : undefined}
@@ -57,8 +57,7 @@ function HeaderLayout() {
                       </div>
                       <a
                         href="#!"
-                        type="button"
-                        className="rounded-full bg-dark text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
+                        className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
                       >
                         <svg className="w-5 h-5" viewBox="0 0 24 24">
                           <path
@@ -70,8 +69,7 @@ function HeaderLayout() {
 
                       <a
                         href="#!"
-                        type="button"
-                        className="rounded-full bg-dark text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
+                        className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
                       >
                         <svg className="w-5 h-5" viewBox="0 0 24 24">
                           <path
@@ -83,8 +81,7 @@ function HeaderLayout() {
 
                       <a
                         href="#!"
-                        type="button"
-                        className="rounded-full bg-dark text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
+                        className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
                       >
                         <svg className="w-5 h-5" viewBox="0 0 16 12">
                           <path
@@ -96,7 +93,6 @@ function HeaderLayout() {
 
                       <a
                         href="#!"
-                        type="button"
                         className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-1 px-4"
                       >
                         Connect Wallet
@@ -161,8 +157,8 @@ function HeaderLayout() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            ? " text-white"
+                            : "text-gray-300 hover:text-white",
                           "block px-3 rounded-md text-base font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -186,7 +182,7 @@ function HeaderLayout() {
                     href="#"
                     className={classNames(
                       true
-                        ? "bg-gray-900 text-white"
+                        ? "text-white"
                         : "text-gray-300 hover:bg-gray-700 hover:text-white",
                       "block px-3 rounded-md text-base font-medium"
                     )}
@@ -201,8 +197,7 @@ function HeaderLayout() {
                   <div className="flex items-center px-5">
                     <a
                       href="#!"
-                      type="button"
-                      className="rounded-full text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-10 h-10 m-1 py-2 px-2"
+                      className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-10 h-10 m-1 py-2 px-2"
                     >
                       <svg className="w-6 h-6" viewBox="0 0 24 24">
                         <path
@@ -213,8 +208,7 @@ function HeaderLayout() {
                     </a>
                     <a
                       href="#!"
-                      type="button"
-                      className="rounded-full text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-10 h-10 m-1 py-2 px-2"
+                      className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-10 h-10 m-1 py-2 px-2"
                     >
                       <svg className="w-6 h-6" viewBox="0 0 24 24">
                         <path
@@ -225,8 +219,7 @@ function HeaderLayout() {
                     </a>
                     <a
                       href="#!"
-                      type="button"
-                      className="rounded-full text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-10 h-10 m-1 py-2 px-2"
+                      className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-10 h-10 m-1 py-2 px-2"
                     >
                       <svg className="w-5 h-5" viewBox="0 0 16 12">
                         <path
