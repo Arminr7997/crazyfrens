@@ -1,7 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Images } from "@/utils/images";
+import contract from "../../../contracts/abi.json";
+import { ethers } from "ethers";
+
+const contractAddress = "0xEcEb8DA0A44cB605305deef36d0490681744be67";
+const abi = contract.abi;
 
 const navigation = [
   {
@@ -23,6 +28,101 @@ function classNames(...classes) {
 }
 
 function HeaderLayout() {
+  const [currentAccount, setCurrentAccount] = useState(null);
+
+  const checkWalletIsConnected = async () => {
+    const { ethereum } = window;
+
+    if (!ethereum) {
+      console.log("Make sure you have Metamask installed!");
+      return;
+    } else {
+      console.log("Wallet exists! We're ready to go!");
+    }
+
+    const accounts = await ethereum.request({ method: "eth_accounts" });
+
+    if (accounts.length !== 0) {
+      const account = accounts[0];
+      console.log("Found an authorized account: ", account);
+      setCurrentAccount(account);
+    } else {
+      console.log("No authorized account found");
+    }
+  };
+
+  const connectWalletHandler = async () => {
+    const { ethereum } = window;
+
+    if (!ethereum) {
+      alert("Please install Metamask!");
+    }
+
+    try {
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      console.log("Found an account! Address: ", accounts[0]);
+      setCurrentAccount(accounts[0]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const mintNftHandler = async () => {
+    try {
+      const { ethereum } = window;
+
+      if (ethereum) {
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const nftContract = new ethers.Contract(contractAddress, abi, signer);
+
+        console.log("Initialize payment");
+        let nftTxn = await nftContract.Mint(1, {
+          value: ethers.utils.parseEther("0.01"),
+        });
+
+        console.log("Mining... please wait");
+        await nftTxn.wait();
+
+        console.log(
+          `Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
+        );
+      } else {
+        console.log("Ethereum object does not exist");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const connectWalletButton = () => {
+    return (
+      <button
+        onClick={connectWalletHandler}
+        className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4"
+      >
+        Connect Wallet
+      </button>
+    );
+  };
+
+  const mintNftButton = () => {
+    return (
+      <button
+        onClick={mintNftHandler}
+        className="rounded-full font-oswald bg-orange-400 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4"
+      >
+        Mint NFT
+      </button>
+    );
+  };
+
+  useEffect(() => {
+    checkWalletIsConnected();
+  }, []);
+
   return (
     <Fragment>
       <div className="min-h-full">
@@ -91,12 +191,7 @@ function HeaderLayout() {
                         </svg>
                       </a>
 
-                      <a
-                        href="#!"
-                        className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-1 px-4"
-                      >
-                        Connect Wallet
-                      </a>
+                      {currentAccount ? mintNftButton() : connectWalletButton()}
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="ml-3 relative">
@@ -149,10 +244,9 @@ function HeaderLayout() {
 
               <Disclosure.Panel className="md:hidden h-screen bg-dark">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                  {navigation.map((item) => (
-                    <Fragment>
+                  {navigation.map((item,index) => (
+                    <Fragment key={index}>
                       <Disclosure.Button
-                        key={item.name}
                         as="a"
                         href={item.href}
                         className={classNames(
