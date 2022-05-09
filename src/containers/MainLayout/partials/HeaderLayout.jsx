@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure, Menu, Transition, Dialog } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Images } from "@/utils/images";
 import contract from "../../../contracts/abi.json";
@@ -29,6 +29,7 @@ function classNames(...classes) {
 
 function HeaderLayout() {
   const [currentAccount, setCurrentAccount] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const checkWalletIsConnected = async () => {
     const { ethereum } = window;
@@ -51,23 +52,9 @@ function HeaderLayout() {
     }
   };
 
-  const connectWalletHandler = async () => {
-    const { ethereum } = window;
+  // const connectWalletHandler = async () => {
 
-    if (!ethereum) {
-      alert("Please install Metamask!");
-    }
-
-    try {
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      console.log("Found an account! Address: ", accounts[0]);
-      setCurrentAccount(accounts[0]);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  // };
 
   const mintNftHandler = async () => {
     try {
@@ -100,7 +87,7 @@ function HeaderLayout() {
   const connectWalletButton = () => {
     return (
       <button
-        onClick={connectWalletHandler}
+        onClick={() => setIsOpen(true)}
         className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4"
       >
         Connect Wallet
@@ -117,6 +104,48 @@ function HeaderLayout() {
         Mint NFT
       </button>
     );
+  };
+
+  const handleConnect = async () => {
+    const { ethereum } = window;
+
+    if (!ethereum) {
+      alert("Please install Metamask!");
+    }
+
+    try {
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      alert(`Found an account! Address: ${accounts[0]}`);
+      setCurrentAccount(accounts[0]);
+    } catch (err) {
+      console.log(err);
+      setIsOpen(false);
+    }
+  };
+
+  const handleWalletConnect = async () => {
+    const { ethereum } = window;
+
+    if (!ethereum) {
+      alert("Please install Metamask!");
+    }
+
+    try {
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      alert(`Found an account! Address: ${accounts[0]}`);
+      setCurrentAccount(accounts[0]);
+    } catch (err) {
+      console.log(err);
+      setIsOpen(false);
+    }
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -244,7 +273,7 @@ function HeaderLayout() {
 
               <Disclosure.Panel className="md:hidden h-screen bg-dark">
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                  {navigation.map((item,index) => (
+                  {navigation.map((item, index) => (
                     <Fragment key={index}>
                       <Disclosure.Button
                         as="a"
@@ -328,6 +357,96 @@ function HeaderLayout() {
             </Fragment>
           )}
         </Disclosure>
+      </div>
+      <div>
+        <Transition appear show={isOpen} as={Fragment}>
+          <Dialog
+            as="div"
+            className="fixed inset-0 z-10 overflow-y-auto"
+            onClose={closeModal}
+          >
+            <div className="min-h-screen px-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-30"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-30"
+                leaveTo="opacity-0"
+              >
+                <Dialog.Overlay className="fixed inset-0 dialogue-overlay opacity-30" />
+              </Transition.Child>
+
+              <span
+                className="inline-block h-screen align-middle"
+                aria-hidden="true"
+              >
+                &#8203;
+              </span>
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
+              >
+                <div className="inline-block w-full max-w-md my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                  <div className="flex flex-col">
+                    <div
+                      className="hover:bg-gray-100 border-b border-solid border-gray-200 transition-all duration-200 cursor-pointer flex flex-col justify-center p-6 py-8"
+                      onClick={handleConnect}
+                    >
+                      <img
+                        src={Images.metamaskWalletImage}
+                        width="97"
+                        height="97"
+                        alt="Metamask Logo"
+                        className="mx-auto"
+                      />
+                      <div className="text-center mt-1">
+                        <h2 className="text-2xl font-semibold text-gray-900">
+                          MetaMask
+                        </h2>
+                        <p className="text-gray-500">
+                          Connect your metamask wallet.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      className="hover:bg-gray-100 transition-all duration-200 cursor-pointer flex flex-col justify-center p-6 py-8"
+                      onClick={handleWalletConnect}
+                    >
+                      <img
+                        src={Images.connectWalletImage}
+                        width="97"
+                        height="97"
+                        alt="Metamask Logo"
+                        className="mx-auto"
+                      />
+                      <div className="text-center mt-1">
+                        <h2 className="text-2xl font-semibold text-gray-900">
+                          Wallet Connect
+                        </h2>
+                        <p className="text-gray-500">
+                          Scan with your favorite wallet to connect.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Transition.Child>
+              <style jsx>{`
+                :global(.dialogue-overlay) {
+                  background-color: black;
+                  opacity: 0.3;
+                }
+              `}</style>
+            </div>
+          </Dialog>
+        </Transition>
       </div>
     </Fragment>
   );

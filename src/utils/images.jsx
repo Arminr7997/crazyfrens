@@ -28,6 +28,8 @@ import navMessagesIcon from "./../assets/images/nav-icon-messages.png";
 import circle01Image from "./../assets/images/circle01.png";
 import circle02Image from "./../assets/images/circle02.png";
 import circle03Image from "./../assets/images/circle03.png";
+import metamaskWalletImage from "./../assets/images/metamask.svg";
+import connectWalletImage from "./../assets/images/wallet-connect.svg";
 
 export const Images = {
   logoWhite,
@@ -60,4 +62,6 @@ export const Images = {
   circle01Image,
   circle02Image,
   circle03Image,
+  metamaskWalletImage,
+  connectWalletImage,
 };
