@@ -311,9 +311,7 @@ function HeaderLayout() {
                     )}
                     aria-current={true ? "page" : undefined}
                   >
-                    <div className="mt-4 rounded-full text-xl font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-12 pt-2 pb-2 px-4">
-                      Connect Wallet
-                    </div>
+                    {currentAccount ? mintNftButton() : connectWalletButton()}
                   </Disclosure.Button>
                 </div>
                 <div className="pt-4 pb-3 border-t border-gray-700">
