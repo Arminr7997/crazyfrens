@@ -27,6 +27,10 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+function isMobileDevice() {
+  return "ontouchstart" in window || "onmsgesturechange" in window;
+}
+
 function HeaderLayout() {
   const [currentAccount, setCurrentAccount] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -113,15 +117,17 @@ function HeaderLayout() {
       alert("Please install Metamask!");
     }
 
-    try {
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      alert(`Found an account! Address: ${accounts[0]}`);
-      setCurrentAccount(accounts[0]);
-    } catch (err) {
-      console.log(err);
-      setIsOpen(false);
+    if (isMobileDevice()) {
+      try {
+        const accounts = await ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        alert(`Found an account! Address: ${accounts[0]}`);
+        setCurrentAccount(accounts[0]);
+      } catch (err) {
+        console.log(err);
+        setIsOpen(false);
+      }
     }
   };
 
@@ -129,18 +135,20 @@ function HeaderLayout() {
     const { ethereum } = window;
 
     if (!ethereum) {
-      alert("Please install Metamask!");
+      alert("Please install wallet conenct!");
     }
 
-    try {
-      const accounts = await ethereum.request({
-        method: "eth_requestAccounts",
-      });
-      alert(`Found an account! Address: ${accounts[0]}`);
-      setCurrentAccount(accounts[0]);
-    } catch (err) {
-      console.log(err);
-      setIsOpen(false);
+    if (isMobileDevice()) {
+      try {
+        const accounts = await ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        alert(`Found an account! Address: ${accounts[0]}`);
+        setCurrentAccount(accounts[0]);
+      } catch (err) {
+        console.log(err);
+        setIsOpen(false);
+      }
     }
   };
 
