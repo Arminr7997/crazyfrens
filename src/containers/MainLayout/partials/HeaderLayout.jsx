@@ -2,11 +2,15 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Disclosure, Menu, Transition, Dialog } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Images } from "@/utils/images";
-import contract from "../../../contracts/abi.json";
-import { ethers } from "ethers";
-
-const contractAddress = "0xEcEb8DA0A44cB605305deef36d0490681744be67";
-const abi = contract.abi;
+//web3
+import { useWeb3React } from "@web3-react/core";
+import {
+  injected,
+  walletconnect,
+  resetWalletConnector,
+  walletlink,
+} from "@/helpers/connectors";
+import { getContract } from "@/helpers/contract";
 
 const navigation = [
   {
@@ -27,138 +31,82 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-function isMobileDevice() {
-  return "ontouchstart" in window || "onmsgesturechange" in window;
-}
-
 function HeaderLayout() {
-  const [currentAccount, setCurrentAccount] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-
-  const checkWalletIsConnected = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      console.log("Make sure you have Metamask installed!");
-      return;
-    } else {
-      console.log("Wallet exists! We're ready to go!");
-    }
-
-    const accounts = await ethereum.request({ method: "eth_accounts" });
-
-    if (accounts.length !== 0) {
-      const account = accounts[0];
-      console.log("Found an authorized account: ", account);
-      setCurrentAccount(account);
-    } else {
-      console.log("No authorized account found");
-    }
-  };
-
-  // const connectWalletHandler = async () => {
-
-  // };
-
-  const mintNftHandler = async () => {
+  //connector, library, chainId, account, activate, deactivate
+  const web3reactContext = useWeb3React();
+  //web3react
+  const writeToContractUsingWeb3React = async () => {
     try {
-      const { ethereum } = window;
-
-      if (ethereum) {
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
-        const nftContract = new ethers.Contract(contractAddress, abi, signer);
-
-        console.log("Initialize payment");
-        let nftTxn = await nftContract.Mint(1, {
-          value: ethers.utils.parseEther("0.01"),
-        });
-
-        console.log("Mining... please wait");
-        await nftTxn.wait();
-
-        console.log(
-          `Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`
-        );
-      } else {
-        console.log("Ethereum object does not exist");
-      }
-    } catch (err) {
-      console.log(err);
+      const randomNumber = Math.floor(Math.random() * 100);
+      const myContract = getContract(
+        web3reactContext.library,
+        web3reactContext.account
+      );
+      const overrides = {
+        gasLimit: 230000,
+      };
+      const response = await myContract.store(randomNumber, overrides);
+      console.log(response);
+      alert("write " + randomNumber);
+    } catch (ex) {
+      console.log(ex);
+      alert(ex);
     }
   };
 
-  const connectWalletButton = () => {
-    return (
-      <button
-        onClick={() => setIsOpen(true)}
-        className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4"
-      >
-        Connect Wallet
-      </button>
-    );
-  };
-
-  const mintNftButton = () => {
-    return (
-      <button
-        onClick={mintNftHandler}
-        className="rounded-full font-oswald bg-orange-400 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4"
-      >
-        Mint NFT
-      </button>
-    );
-  };
-
-  const handleConnect = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      alert("Please install Metamask!");
-    }
-
-    if (isMobileDevice()) {
-      try {
-        const accounts = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        alert(`Found an account! Address: ${accounts[0]}`);
-        setCurrentAccount(accounts[0]);
-      } catch (err) {
-        console.log(err);
-        setIsOpen(false);
-      }
+  const disconnectMetamaskSimple = () => {
+    try {
+      web3reactContext.deactivate();
+    } catch (ex) {
+      console.log(ex);
     }
   };
 
-  const handleWalletConnect = async () => {
-    const { ethereum } = window;
-
-    if (!ethereum) {
-      alert("Please install wallet conenct!");
+  //web3react context
+  const checkInfoSimple = async () => {
+    try {
+      console.log("web3reactContext");
+      console.log(web3reactContext);
+    } catch (ex) {
+      console.log(ex);
     }
+  };
 
-    if (isMobileDevice()) {
-      try {
-        const accounts = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        alert(`Found an account! Address: ${accounts[0]}`);
-        setCurrentAccount(accounts[0]);
-      } catch (err) {
-        console.log(err);
-        setIsOpen(false);
-      }
+  //web3react metamask
+  const connectMetamaskSimple = async () => {
+    try {
+      await web3reactContext.activate(injected);
+      setIsOpen(false);
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
+  //web3react walletconnect
+  const connectWalletConnectSimple = async () => {
+    alert("asdasd")
+    try {
+      resetWalletConnector(walletconnect);
+      await web3reactContext.activate(walletconnect);
+      setIsOpen(false);
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
+  //web3react coinbase
+  const connectCoinbaseSimple = async () => {
+    try {
+      await web3reactContext.activate(walletlink);
+    } catch (ex) {
+      console.log(ex);
     }
   };
 
   const closeModal = () => {
     setIsOpen(false);
   };
-
-  useEffect(() => {
-    checkWalletIsConnected();
-  }, []);
 
   return (
     <Fragment>
@@ -228,7 +176,18 @@ function HeaderLayout() {
                         </svg>
                       </a>
 
-                      {currentAccount ? mintNftButton() : connectWalletButton()}
+                      {web3reactContext.account ? (
+                        <button className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4">
+                          {web3reactContext.account}
+                        </button>
+                      ) : (
+                        <button
+                          onClick={() => setIsOpen(true)}
+                          className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4"
+                        >
+                          Connect Wallet
+                        </button>
+                      )}
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="ml-3 relative">
@@ -319,7 +278,18 @@ function HeaderLayout() {
                     )}
                     aria-current={true ? "page" : undefined}
                   >
-                    {currentAccount ? mintNftButton() : connectWalletButton()}
+                    {web3reactContext.account ? (
+                      <button className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4">
+                        {web3reactContext.account}
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => setIsOpen(true)}
+                        className="rounded-full font-oswald bg-secondary-300 text-white leading-normal hover:bg-secondary-300 hover:bg-opacity-10 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-auto h-8 pt-0 px-4"
+                      >
+                        Connect Wallet
+                      </button>
+                    )}
                   </Disclosure.Button>
                 </div>
                 <div className="pt-4 pb-3 border-t border-gray-700">
@@ -403,7 +373,7 @@ function HeaderLayout() {
                   <div className="flex flex-col">
                     <div
                       className="hover:bg-gray-100 border-b border-solid border-gray-200 transition-all duration-200 cursor-pointer flex flex-col justify-center p-6 py-8"
-                      onClick={handleConnect}
+                      onClick={connectMetamaskSimple}
                     >
                       <img
                         src={Images.metamaskWalletImage}
@@ -423,7 +393,7 @@ function HeaderLayout() {
                     </div>
                     <div
                       className="hover:bg-gray-100 transition-all duration-200 cursor-pointer flex flex-col justify-center p-6 py-8"
-                      onClick={handleWalletConnect}
+                      onClick={connectWalletConnectSimple}
                     >
                       <img
                         src={Images.connectWalletImage}
@@ -444,12 +414,12 @@ function HeaderLayout() {
                   </div>
                 </div>
               </Transition.Child>
-              <style jsx>{`
+              {/* <style jsx>{`
                 :global(.dialogue-overlay) {
                   background-color: black;
                   opacity: 0.3;
                 }
-              `}</style>
+              `}</style> */}
             </div>
           </Dialog>
         </Transition>
