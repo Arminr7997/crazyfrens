@@ -17,7 +17,7 @@ function AboutProjectDesktop() {
           </div>
           <div className="flex flex-col justify-center items-center">
             <img src={Images.circle03Image} alt="image" className="my-6" />
-            <div className="font-oswald text-xl">Ad</div>
+            <div className="font-oswald text-xl">Toys</div>
           </div>
         </div>
         <p className="font-oswald text-lg text-gray-400 mt-4">
