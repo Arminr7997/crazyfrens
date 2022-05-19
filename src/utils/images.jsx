@@ -1,6 +1,6 @@
 import logoWhite from "./../assets/images/logo.svg";
-import dogImage1 from "./../assets/images/dog-placeholder-01.svg";
-import dogImage2 from "./../assets/images/dog-placeholder-02.svg";
+import dogImage1 from "./../assets/images/dog-placeholder-01.png";
+import dogImage2 from "./../assets/images/dog-placeholder-02.png";
 import avatar1 from "./../assets/images/mahsa.png";
 import avatar2 from "./../assets/images/amirhossein.png";
 import avatar3 from "./../assets/images/bahareh.png";
@@ -9,6 +9,8 @@ import arrowLeft from "./../assets/images/arrow-left.png";
 import arrowRight from "./../assets/images/arrow-right.png";
 import heroTitle from "./../assets/images/hero-title.png";
 import heroSlide1 from "./../assets/images/image-slide.png";
+import heroSlide2 from "./../assets/images/image-slide2.png";
+import heroSlide3 from "./../assets/images/image-slide3.png";
 import heroDetails from "./../assets/images/hero-details.png";
 import num01Image from "./../assets/images/num01.png";
 import num02Image from "./../assets/images/num02.png";
@@ -43,6 +45,8 @@ export const Images = {
   arrowRight,
   heroTitle,
   heroSlide1,
+  heroSlide2,
+  heroSlide3,
   heroDetails,
   num01Image,
   num02Image,

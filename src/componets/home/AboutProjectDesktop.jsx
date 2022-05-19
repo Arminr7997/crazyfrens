@@ -21,14 +21,19 @@ function AboutProjectDesktop() {
           </div>
         </div>
         <p className="font-oswald text-lg text-gray-400 mt-4">
-          Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-          NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
-          Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-          NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
-          Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-          NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
-          Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-          NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
+          5555 unique NFTs are made from the story of FRENCHIE FRIENDS. The NFTs
+          are based on a storyline, and the story is so compelling that we
+          decided to write a book about the FRENCHIE FRIENDS. Reading this comic
+          books will make you inspired, and it will affect you so much that you
+          will be interested in living with the characters of the story. So we
+          are making this come true by producing the FRENCHIE FRIENDS toys. You
+          could also set FRENCHIE FRIENDS toys on your desk and get energy while
+          working. Furthermore, you could set FRENCHIE FRIENDS Toys all over
+          your house to simply get energized by making your house more
+          beautiful. Besides, you could give the FRENCHIE FRIENDS toys to your
+          partner as a special gift to make your relationship more interesting.
+          Hold on and see how you fall in love with these tiny funny Frenchie
+          toys
         </p>
       </div>
     </div>

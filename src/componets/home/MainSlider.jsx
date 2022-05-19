@@ -79,14 +79,14 @@ function MainSlider() {
         <div className="px-6 d-flex justify-center">
           <img
             className="object-cover h-full lg:w-2/3 rounded-md p-4"
-            src={Images.heroSlide1}
+            src={Images.heroSlide2}
             alt="slider"
           />
         </div>
         <div className="px-6 d-flex justify-center">
           <img
             className="object-cover h-full lg:w-2/3 rounded-md p-4"
-            src={Images.heroSlide1}
+            src={Images.heroSlide3}
             alt="slider"
           />
         </div>

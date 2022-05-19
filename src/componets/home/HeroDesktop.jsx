@@ -10,10 +10,9 @@ function HeroDesktop() {
           <div className="max-w-lg">
             <img src={Images.heroTitle} alt="image" />
             <p className="mt-4 text-gray-400 font-oswald">
-              Digital Marketplace for Crypto Collectiobles and non-fongible
-              Tokens <span className="text-white">NFTs!</span> Also Innovative
-              and Unique <span className="text-white">Collections</span> to
-              Discover NFT Artworks.
+              Join us with this story, which is
+              <span className="text-white">{" "}fascinating frenchie friends{" "}</span>
+              going to be built toys and comic books out of it.
             </p>
             <div className="mt-6">
               <img src={Images.heroDetails} alt="image" />
