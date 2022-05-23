@@ -27,9 +27,9 @@ import navHomeIcon from "./../assets/images/nav-icon-home.png";
 import navBagIcon from "./../assets/images/nav-icon-bag.png";
 import navDocumentIcon from "./../assets/images/nav-icon-document.png";
 import navMessagesIcon from "./../assets/images/nav-icon-messages.png";
-import circle01Image from "./../assets/images/circle01.png";
-import circle02Image from "./../assets/images/circle02.png";
-import circle03Image from "./../assets/images/circle03.png";
+import circle01Image from "./../assets/images/circle01.svg";
+import circle02Image from "./../assets/images/circle02.svg";
+import circle03Image from "./../assets/images/circle03.svg";
 import metamaskWalletImage from "./../assets/images/metamask.svg";
 import connectWalletImage from "./../assets/images/wallet-connect.svg";
 
