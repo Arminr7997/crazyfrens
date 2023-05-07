@@ -1,0 +1,79 @@
+body {
+  background: #0f0f11 url("./../images/pattern-bg.png") no-repeat top right;
+  color: white;
+}
+
+.slick-next:before,
+[dir="rtl"] .slick-prev:before {
+  content: "" !important;
+}
+
+.slick-prev:before,
+[dir="rtl"] .slick-prev:before {
+  content: "" !important;
+}
+
+.col-auto {
+  grid-column: auto;
+}
+
+.main-slider {
+  .slick-dots li button:before {
+    color: white;
+    font-size: 8px;
+    line-height: 20px;
+  }
+
+  .slick-dots li.slick-active button:before {
+    opacity: 0.75;
+    font-size: 10px;
+    color: #ffffff;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: unset !important;
+    bottom: -40px;
+    left: unset;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: unset;
+      z-index: 2;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    &.slick-prev {
+      transform: translateX(-50%) translateX(-30px);
+      left: 30%;
+      z-index: 2;
+      &:after {
+        transform: translateX(-50%) translateX(-2px) translateY(-50%);
+      }
+    }
+    &.slick-next {
+      transform: translateX(-50%) translateX(30px);
+      right: 30%;
+      z-index: 1;
+      &:after {
+        transform: translateX(-50%) translateX(2px) translateY(-50%);
+      }
+    }
+    &.slick-disabled {
+      cursor: default;
+      background: green;
+      opacity: 0.5;
+    }
+  }
+}
+
+.d-flex {
+  display: flex !important;
+}
