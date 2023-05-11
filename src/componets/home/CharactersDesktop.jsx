@@ -5,12 +5,12 @@ function CharactersDesktop() {
   return (
     <div className="bg-dark">
       <div className="container mx-auto py-12 lg:px-32 lg:py-8 px-8">
-        <h1 className="font-jungle text-3xl">Characters</h1>
+        <h1 className="font-jungle text-3xl">Story</h1>
         <p className="font-oswald text-lg text-gray-400 mt-4">
-          Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-          NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
-          Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-          NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
+          Billie and Jackie Are Two Close Friends, They Live On the Mars in a City Named Dogtropolis. During One of His Adventures, Billy Was Searching for a Sexual Partner. He Found a Chick on One of the Interplanetary Chatrooms and Decided to Pay a Visit to Earth and Meet Her.
+        </p>
+        <p className="font-oswald text-lg text-gray-400">
+          Earth Has Changed a lot! Its Filled with Flying Cars, Nature Is Completely Destroyed and Humans Live with AI Kits Implanted into Their Brains. Love and Affection Are Decimated, And So They Are Faced with A Reality That Changes Their Goal.
         </p>
         <div className="my-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 gap-1 items-center">
@@ -18,23 +18,15 @@ function CharactersDesktop() {
               <img src={Images.dogImage1} alt="image" />
             </div>
             <div className="col-span-2">
-              <h1 className="mb-4 text-2xl font-oswald">A. The name of first Character</h1>
+              <h1 className="mb-4 text-2xl font-oswald">Billie</h1>
               <p className="font-oswald text-lg text-gray-400">
-                Digital Marketplace for Crypto Collectiobles and non-fongible
-                Tokens NFTs! Also Innovative and Unique Collections to Discover
-                NFT Artworks. Digital Marketplace for Crypto Collectiobles and
-                non-fongible Tokens NFTs! Also Innovative and Unique Collections
-                to Discover NFT Artworks.{" "}
+                He Is an Anarchist and Doesn’t Live by Any Codes at All. He Was the First Dog to Set Foot On Mars in 2045. He Loves Pretty Girls and His Sause Collection. He Is a Diversity Seeking, Gluttonous Dog and has a Talent for Shooting. from His Friends Point of View, Billie Is Dumb, Horny and Unpredictable.{" "}
               </p>
             </div>
             <div className="col-span-2 mt-12">
-              <h1 className="mb-4 text-2xl font-oswald">B. The name of first Character</h1>
+              <h1 className="mb-4 text-2xl font-oswald">Jackie</h1>
               <p className="font-oswald text-lg text-gray-400">
-                Digital Marketplace for Crypto Collectiobles and non-fongible
-                Tokens NFTs! Also Innovative and Unique Collections to Discover
-                NFT Artworks. Digital Marketplace for Crypto Collectiobles and
-                non-fongible Tokens NFTs! Also Innovative and Unique Collections
-                to Discover NFT Artworks.{" "}
+                Jackie Traveled to Mars in 2050 and met Billie in Dogtropolis. Jackie Is Extremely Sharp and Logical. He Is a Talented Strategist and Analyses Everything. He Loves Gun Collections, But Never Used One Before. Jackie Has a Kind Heart (Which Sometime Overcomes His Logic!). from His Friends Point of View, Jackie is a Long-Eared, Talkative Dog.{" "}
               </p>
             </div>
             <div className="my-4">

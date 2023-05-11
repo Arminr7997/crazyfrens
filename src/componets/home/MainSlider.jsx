@@ -10,7 +10,7 @@ function SampleNextArrow(props) {
       style={{ ...style, display: "block", width: 32 }}
       onClick={onClick}
     >
-      <img src={Images.mainArrowRight} alt="arrow" />
+      <img src={Images.mainArrowLeft} alt="arrow" className="rotate-180" />
     </div>
   );
 }
@@ -87,6 +87,13 @@ function MainSlider() {
           <img
             className="object-cover h-full lg:w-2/3 rounded-md p-4"
             src={Images.heroSlide3}
+            alt="slider"
+          />
+        </div>
+        <div className="px-6 d-flex justify-center">
+          <img
+            className="object-cover h-full lg:w-2/3 rounded-md p-4"
+            src={Images.heroSlide4}
             alt="slider"
           />
         </div>

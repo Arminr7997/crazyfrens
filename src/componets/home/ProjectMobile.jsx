@@ -6,10 +6,7 @@ function ProjectMobile() {
     <div className="container mx-auto lg:px-32 lg:py-8 px-8 py-4">
       <h1 className="font-jungle text-3xl">About Project & Road Map</h1>
       <p className="font-oswald text-lg text-gray-400 mt-4">
-        Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-        NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
-        Digital Marketplace for Crypto Collectiobles and non-fongible Tokens
-        NFTs! Also Innovative and Unique Collections to Discover NFT Artworks.
+        Frenchies is a collection of 5,555 designed & randomly generated NFTs on the Ethereum Blockchain . Frenchies holders will have access and opportunities to participate in exclusive events, such as: giveaways, bonus NFT claims & more.. The best is yet to come, check out our roadmap below.
       </p>
       <div className="grid lg:gap-x-4 lg:gap-y-8 gap-y-10 mt-10 grid-flow-row ">
         <div className="bg-footer border-border border-l-8 rounded-md  p-4 relative">
