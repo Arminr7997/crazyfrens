@@ -2,7 +2,7 @@
   "name": "nft-landing",
   "private": true,
   "version": "0.0.0",
-  "homepage": "Crazyfrens.io/",
+  "homepage": "https://arminr7997.github.io/crazyfrens/dist/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
