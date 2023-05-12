@@ -3,6 +3,7 @@ import reactRefresh from "@vitejs/plugin-react-refresh";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: 'https://arminr7997.github.io/crazyfrens/',
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),

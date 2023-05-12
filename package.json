@@ -2,7 +2,7 @@
   "name": "nft-landing",
   "private": true,
   "version": "0.0.0",
-  "homepage": "./",
+  "homepage": "Crazyfrens.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
