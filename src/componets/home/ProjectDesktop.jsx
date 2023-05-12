@@ -3,7 +3,7 @@ import { Images } from "@/utils/images";
 
 function ProjectDesktop() {
   return (
-    <div className="container mx-auto lg:px-32 lg:py-8 px-8 py-4">
+    <div className="container mx-auto lg:px-32  py-12 px-8 py-4">
       <h1 className="font-jungle text-3xl">About Project & Road Map</h1>
       <p className="font-oswald text-lg text-gray-400 mt-4">
         Frenchies is a collection of 5,555 designed & randomly generated NFTs on the Ethereum Blockchain . Frenchies holders will have access and opportunities to participate in exclusive events, such as: giveaways, bonus NFT claims & more.. The best is yet to come, check out our roadmap below.

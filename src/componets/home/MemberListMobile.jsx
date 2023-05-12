@@ -4,7 +4,7 @@ import { Images } from "@/utils/images";
 function MemberListMobile() {
   return (
     <div className="my-12">
-      <div className="container mx-auto lg:px-32 lg:py-8 px-10 py-2">
+      <div className="container mx-auto lg:px-32  py-12 px-10 py-2">
         <div className="flex justify-between content-center items-center">
           <h1 className="font-jungle text-3xl mb-4">Our Team Members</h1>
           <a href="#">
@@ -19,27 +19,15 @@ function MemberListMobile() {
                 alt="avatar"
                 className="m-2 mx-auto w-1/2"
               />
-              <h3 className="font-oswald text-xl">Okhravi</h3>
-              <h5 className="font-oswald text-gray-400 text-lg">Designer</h5>
+              <h3 className="font-oswald text-xl">Pouyan</h3>
+              <h5 className="font-oswald text-gray-400 text-lg">founder</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
                   className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
-                    href="#!"
-                    className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
-                  >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24">
-                      <path
-                        fill="currentColor"
-                        d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
-                      />
-                    </svg>
-                  </a>
-
-                  <a
-                    href="#!"
+                    href="https://twitter.com/pouyanroohii?s=11&t=Pqp8b5euKLJGATY4LJhKgQ"
                     className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
                   >
                     <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -60,27 +48,15 @@ function MemberListMobile() {
                 alt="avatar"
                 className="m-2 mx-auto w-1/2"
               />
-              <h3 className="font-oswald text-xl">Rahmani</h3>
-              <h5 className="font-oswald text-gray-400 text-lg">Developer</h5>
+              <h3 className="font-oswald text-xl">Ish</h3>
+              <h5 className="font-oswald text-gray-400 text-lg">advisor</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
                   className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
-                    href="#!"
-                    className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
-                  >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24">
-                      <path
-                        fill="currentColor"
-                        d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
-                      />
-                    </svg>
-                  </a>
-
-                  <a
-                    href="#!"
+                    href="https://twitter.com/ishmilly?s=11&t=Pqp8b5euKLJGATY4LJhKgQ"
                     className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
                   >
                     <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -101,27 +77,15 @@ function MemberListMobile() {
                 alt="avatar"
                 className="m-2 mx-auto w-1/2"
               />
-              <h3 className="font-oswald text-xl">Okhravi</h3>
-              <h5 className="font-oswald text-gray-400 text-lg">Designer</h5>
+              <h3 className="font-oswald text-xl">Prietten</h3>
+              <h5 className="font-oswald text-gray-400 text-lg">modrator</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
                   className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
-                    href="#!"
-                    className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
-                  >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24">
-                      <path
-                        fill="currentColor"
-                        d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
-                      />
-                    </svg>
-                  </a>
-
-                  <a
-                    href="#!"
+                    href="#"
                     className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
                   >
                     <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -142,28 +106,16 @@ function MemberListMobile() {
                 alt="avatar"
                 className="m-2 mx-auto w-1/2"
               />
-              <h3 className="font-oswald text-xl">Rahmani</h3>
-              <h5 className="font-oswald text-gray-400 text-lg">Manager</h5>
+              <h3 className="font-oswald text-xl">Bahram</h3>
+              <h5 className="font-oswald text-gray-400 text-lg">community manager</h5>
               <div className="w-full flex items-center justify-center ">
                 <div
                   className="bg-dark px-1 rounded flex flex-row"
                   style={{ marginBottom: "-56px", marginTop: "20px" }}
                 >
                   <a
-                    href="#!"
-                    className="rounded-full  text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
-                  >
-                    <svg className="w-5 h-5" viewBox="0 0 24 24">
-                      <path
-                        fill="currentColor"
-                        d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
-                      />
-                    </svg>
-                  </a>
-
-                  <a
-                    href="#!"
-                    className="rounded-full  text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
+                    href="https://twitter.com/bahram_mohamadi?s=11&t=Pqp8b5euKLJGATY4LJhKgQ"
+                    className="rounded-full text-white leading-normal uppercase hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-8 h-8 m-1 py-2 px-1"
                   >
                     <svg className="w-5 h-5" viewBox="0 0 24 24">
                       <path
